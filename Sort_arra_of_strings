@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
+ int myCompare(const void* a, const void* b)
+{
+     return strcmp(*(char **)a, *(char **)b);
+}
+
+int main()
+{
+    char * str1[]={" Hello ", "ABC", "1234"};
+    int n= sizeof(str1)/sizeof(str1[0]);
+    int i;
+    printf(" Before sorting\n");
+    for(  i=0; i< n; i++)
+    printf("%s\n", str1[i]);
+    
+    qsort( (void*) str1, n, sizeof(char*), myCompare);
+    
+    printf(" After  sorting ");
+    for( i=0; i< n; i++)
+    printf("%s\n", str1[i]);
+      
+}
