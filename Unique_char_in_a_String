@@ -1,0 +1,16 @@
+int main()
+{
+      
+     char* str="geeksforgeeks";
+     char count[256];
+     int len=strlen(str);
+     for( int i=0;i<len;i++)
+     count[str[i]]++;
+     int max=-1;
+     for( int i=0; i<len;i++)
+     {
+       if( count[str[i]]==1)
+           printf("Uniqe character is  %c \n",str[i]);
+     }
+    
+}
