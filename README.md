@@ -1,3 +1,3 @@
 # DataStrucures
 
-My attempts at learning data strucures and algos. Questions from geeksfoegeeks and leetcode. C/C++ implementation
+My attempts at learning data strucures and algos. Questions from geeksforgeeks and leetcode. C/C++ implementation
