@@ -1,0 +1,58 @@
+/******************************************************************************
+// Leetcode Q151 Reverse words in string
+#include <stdio.h>
+#include<string.h>
+
+void wordRev(char* s,int low, int high )
+{ 
+    char temp;
+    while(low<high)
+    {
+        temp=s[low];
+        s[low]=s[high];
+        s[high]=temp;
+        low++;
+        high--;
+    }
+}
+
+int main() {
+      char s[]="The sky is blue";
+    int n=strlen(s);
+    
+     char l;
+    int low=0;
+     int high=n-1;
+    while(low<high)
+    {
+        l=s[low];
+        s[low]=s[high];
+        s[high]=l;
+        low++;
+        high--;
+    }   
+    low=0;
+     high=0;
+    for( int i=0;i<n;i++)
+    {
+          
+        
+        if(s[i]==' ')
+          {
+            high=i-1;
+            wordRev(s,low,high);
+            low=i+1;
+           }
+           if(i==n-1)
+        {
+            high=i;
+            wordRev(s,low,high);
+        }
+           
+           
+    }
+    
+   
+    printf("%s",s);
+     
+}
