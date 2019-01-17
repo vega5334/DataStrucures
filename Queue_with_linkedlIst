@@ -1,0 +1,58 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+struct Node{
+    struct Node*next;
+    int val;
+};
+struct Node*front=NULL;
+struct Node*rear=NULL;
+
+void enqueue(int n)
+{
+    struct Node *temp=(struct Node*)malloc(sizeof(struct Node));
+    temp->val=n;
+    rear->next=temp;
+    rear=temp;
+    if(rear==temp)
+    {
+        rear=temp;
+        front=temp;
+    }
+    
+}
+
+void dequeue()
+{
+    if(front==NULL) printf("Queue empty");
+    struct Node* temp=front;
+    front=temp->next;
+    free(front);
+    
+}
+
+void traverse()
+{
+    if(front==rear) printf("Empty");
+    struct Node* temp1=front;
+    while(temp1!=NULL)
+    {
+        printf("%d",temp1->val);
+        temp1=temp1->next;
+    }
+}
+int main()
+{
+   
+    
+    enqueue(2);
+    traverse();
+
+    return 0;
+}
